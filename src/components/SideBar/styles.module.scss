@@ -1,8 +1,12 @@
 .sidebar {
-  background: white;
+  background: var(--gray-100);
   height: 100vh;
   display: flex;
   width: 100%;
   max-width: 250px;
   box-shadow: -5px 8px 15px 0px rgba(170, 170, 170, 0.31);
+
+  @media screen and(max-width: 768px) {
+    display: none;
+  }
 }

@@ -19,7 +19,7 @@ const Header: React.FC = () => {
           <form method='GET' action='/search' className={styles.form}>
             <input type='text' name='product' placeholder='Pesquisar' />
             <button type='submit'>
-              <Search />
+              <Search color="primary"/>
             </button>
           </form>
         </ul>
