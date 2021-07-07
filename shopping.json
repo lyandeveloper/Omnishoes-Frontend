@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": "9bf90ba3-08c1-4ca8-b797-705a672e7789",
+      "slug": "afrojack-mens",
+      "name": "AFROJACK Men's",
+      "category": "calcados",
+      "gender": "male",
+      "price": 170,
+      "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/41Leu3gBUFL.jpg"
+    },
+    {
+      "id": "b846a524-8ce9-4d45-bc55-32d9915c6496",
+      "slug": "relaxed-tee",
+      "name": "Relaxed Tee",
+      "category": "roupas",
+      "gender": "male",
+      "price": 42,
+      "imgUrl": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1621283126-t-shirts-buckmason-black-slub-1621282639.jpg"
+    },
+    {
+      "id": "d7bb07ba-617c-4e09-804d-9eecc824307d",
+      "slug": "apple-watch-series-4",
+      "name": "Apple Watch Series 4",
+      "category": "acessorios",
+      "gender": "male",
+      "price": 3000,
+      "imgUrl": "https://a-static.mlcdn.com.br/618x463/apple-watch-series-4-gps-cellular-44mm-caixa-de-aluminio-prateada-e-pulseira-esportiva-branca/mobstore/306151/0a99aff1fe10541f902ecd35d086ecea.jpg"
+    },
+    {
+      "id": "437def4b-89f3-4bbf-9d2e-87acdeccd2a6",
+      "slug": "cuffed-cargo",
+      "name": "Cuffed Cargo",
+      "category": "roupas",
+      "gender": "female",
+      "price": 100,
+      "imgUrl": "https://assets.ajio.com/medias/sys_master/root/20210403/NNuZ/606896f4f997dd7b64618f74/-1117Wx1400H-461455469-olive-MODEL.jpg"
+    }
+  ]
+}

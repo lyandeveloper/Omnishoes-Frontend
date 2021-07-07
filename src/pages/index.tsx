@@ -6,6 +6,8 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import { makeStyles } from '@material-ui/core/styles';
 import Carrousel from '../components/Carrousel';
+import api from '../services/api';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,8 +28,28 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Home() {
+type ProductTypes = {
+  id: string;
+  slug: string;
+  name: string;
+  category: string;
+  gender: string;
+  price: number;
+  imgUrl: string;
+};
+
+const Home: React.FC = () => {
   const classes = useStyles();
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    async function loadProducts() {
+      const response = await api.get('/products');
+      setProducts(response.data);
+    }
+
+    loadProducts();
+  }, []);
 
   return (
     <main>
@@ -41,38 +63,19 @@ function Home() {
           cols={4}
           spacing={20}
         >
-          <GridListTile>
-            <Product
-              imgSrc='https://images-na.ssl-images-amazon.com/images/I/41Leu3gBUFL.jpg'
-              title="AFROJACK Men's"
-              price={170}
-            />
-          </GridListTile>
-          <GridListTile>
-            <Product
-              imgSrc='https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1621283126-t-shirts-buckmason-black-slub-1621282639.jpg'
-              title='Relaxed Tee'
-              price={42}
-            />
-          </GridListTile>
-          <GridListTile>
-            <Product
-              imgSrc='https://a-static.mlcdn.com.br/618x463/apple-watch-series-4-gps-cellular-44mm-caixa-de-aluminio-prateada-e-pulseira-esportiva-branca/mobstore/306151/0a99aff1fe10541f902ecd35d086ecea.jpg'
-              title='Apple Watch Series 4'
-              price={3000}
-            />
-          </GridListTile>
-          <GridListTile>
-            <Product
-              imgSrc='https://assets.ajio.com/medias/sys_master/root/20210403/NNuZ/606896f4f997dd7b64618f74/-1117Wx1400H-461455469-olive-MODEL.jpg'
-              title='Cuffed Cargo'
-              price={100}
-            />
-          </GridListTile>
+          {products.map((product: ProductTypes) => (
+            <GridListTile key={product.id}>
+              <Product
+                imgSrc={product.imgUrl}
+                title={product.name}
+                price={product.price}
+              />
+            </GridListTile>
+          ))}
         </GridList>
       </div>
     </main>
   );
-}
+};
 
 export default Home;
