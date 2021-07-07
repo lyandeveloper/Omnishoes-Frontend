@@ -2,18 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 :root {
   --main-color: #5a2d82;
-  --secondary-color: #9852d6;
+  --secondary-color: #13abe1;
   --white: #fff;
   --gray-100: #eee;
   --gray-200: #ccc;
   --gray-500: #222;
   --gray-800: #555;
   --black: #000;
+  --button: #ff691e;
 }
 
 @media (max-width: 1080px) {
@@ -59,8 +60,22 @@ h2 {
   font-size: 1.5rem;
 }
 
-button {
-  cursor: pointer;
+button.primary {
+  background: var(--button);
+  font-weight: bold;
+  border: 2px solid var(--button);
+  color: var(--white);
+}
+
+button.secondary {
+  background: var(--white);
+  border: 2px solid var(--button);
+  color: var(--button);
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {

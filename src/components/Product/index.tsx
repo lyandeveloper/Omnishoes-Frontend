@@ -22,32 +22,42 @@ type ProductTypes = {
   imgSrc: string;
   title: string;
   price: number;
+  id: string;
+  slug: string;
 };
 
-const Product: React.FC<ProductTypes> = ({ imgSrc, title, price }) => {
+const Product: React.FC<ProductTypes> = ({
+  imgSrc,
+  title,
+  price,
+  id,
+  slug,
+}) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          component='img'
-          alt={title}
-          height='200'
-          image={imgSrc}
-          title={title}
-          style={{ objectFit: 'contain' }}
-        />
-        <CardContent>
-          <Typography gutterBottom variant='h6' component='h1'>
-            {title}
-          </Typography>
-          <Typography variant='body1' color='textSecondary' component='h2'>
-            R$ {price}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <a href={`/product/${id}/${slug}`}>
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            component='img'
+            alt={title}
+            height='200'
+            image={imgSrc}
+            title={title}
+            style={{ objectFit: 'contain' }}
+          />
+          <CardContent>
+            <Typography gutterBottom variant='h6' component='h1'>
+              {title}
+            </Typography>
+            <Typography variant='body1' color='textSecondary' component='h2'>
+              R$ {price}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </a>
   );
 };
 

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Header from '../components/Header';
 import Product from '../components/Product';
 import styles from './styles.module.scss';
 import GridList from '@material-ui/core/GridList';
@@ -14,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexWrap: 'wrap',
     overflow: 'hidden',
-    padding: 10,
+    marginTop: 20,
   },
   gridList: {
     width: 800,
@@ -53,7 +52,6 @@ const Home: React.FC = () => {
 
   return (
     <main>
-      <Header />
       <Carrousel />
       <div className={`container ${classes.root}`}>
         <GridList
@@ -66,9 +64,11 @@ const Home: React.FC = () => {
           {products.map((product: ProductTypes) => (
             <GridListTile key={product.id}>
               <Product
+                id={product.id}
                 imgSrc={product.imgUrl}
                 title={product.name}
                 price={product.price}
+                slug={product.slug}
               />
             </GridListTile>
           ))}
