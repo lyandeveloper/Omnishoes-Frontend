@@ -13,7 +13,8 @@ import { ImageSearchOutlined } from '@material-ui/icons';
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
-    height: 300, 
+    height: 300,
+    boxShadow: 'none !important',
   },
 });
 
@@ -21,33 +22,33 @@ type ProductTypes = {
   imgSrc: string;
   title: string;
   price: number;
-}
+};
 
-const Product: React.FC<ProductTypes> = ({ imgSrc,  title, price}) => {
+const Product: React.FC<ProductTypes> = ({ imgSrc, title, price }) => {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
-          component="img"
+          component='img'
           alt={title}
-          height="200"
+          height='200'
           image={imgSrc}
           title={title}
-          style={{ objectFit: "contain"}}
+          style={{ objectFit: 'contain' }}
         />
         <CardContent>
-          <Typography gutterBottom variant="h6" component="h1">
+          <Typography gutterBottom variant='h6' component='h1'>
             {title}
           </Typography>
-          <Typography variant="body1" color="textSecondary" component="h2">
+          <Typography variant='body1' color='textSecondary' component='h2'>
             R$ {price}
           </Typography>
         </CardContent>
-      </CardActionArea> 
+      </CardActionArea>
     </Card>
   );
-}
+};
 
 export default Product;
