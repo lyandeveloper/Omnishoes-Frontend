@@ -61,3 +61,18 @@ h2 {
 button {
   cursor: pointer;
 }
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+
+.MuiSvgIcon-colorPrimary {
+  color: #fff !important;
+}
+
+.MuiSvgIcon-colorSecondary {
+  color: #888 !important;
+}

@@ -24,29 +24,17 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     color: 'rgba(255, 255, 255, 0.54)',
   },
-}));
+})); 
 
 
 function Home() {
-  const classes = useStyles();
-  const [width, setWidth] = useState(window.innerWidth);
-  
-  function handleWindowSizeChange() {
-        setWidth(window.innerWidth);
-    }
-  
-    useEffect(() => {
-        window.addEventListener('resize', handleWindowSizeChange);
-        return () => {
-            window.removeEventListener('resize', handleWindowSizeChange);
-        }
-    }, []);
+  const classes = useStyles();  
 
   return (
     <main>
       <Header/>
-      <div className={classes.root}> 
-      <GridList cellHeight={400}  className={classes.gridList} style={{ height: 'auto' }} cols={width < 768 ? 1 : 4} spacing={20}> 
+      <div className={`container ${classes.root}`}> 
+      <GridList cellHeight={400}  className={classes.gridList} style={{ height: 'auto' }} cols={4} spacing={20}> 
         <GridListTile >
           <Product imgSrc="https://images-na.ssl-images-amazon.com/images/I/41Leu3gBUFL.jpg" title="AFROJACK Men's" price={170}/>
         </GridListTile>
