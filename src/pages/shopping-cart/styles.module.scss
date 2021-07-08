@@ -1,0 +1,59 @@
+.cart_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 50vh;
+}
+
+.cart {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  display: flex;
+  flex: 1;
+
+  h1 {
+    font-size: 1.5rem;
+    color: var(--main-color);
+  }
+}
+
+.shop_resume {
+  display: flex;
+  flex: 0.5;
+  flex-direction: column;
+  padding: 1rem;
+  h1 {
+    font-size: 1.5rem;
+    color: var(--main-color);
+  }
+
+  button {
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 1rem;
+    outline: 0;
+    border-radius: 4px;
+  }
+}
+
+.cart_resume_container {
+  background: var(--gray-100);
+  border-radius: 4px;
+  margin-top: 30px;
+}
+
+.cart_resume_card {
+  background: var(--gray-100);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 1rem;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    font-weight: bold;
+    color: var(--gray-800);
+  }
+}
