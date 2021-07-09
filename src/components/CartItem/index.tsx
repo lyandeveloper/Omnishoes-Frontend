@@ -1,3 +1,5 @@
+import { IconButton } from '@material-ui/core';
+import { Delete } from '@material-ui/icons';
 import React from 'react';
 import styles from './styles.module.scss';
 
@@ -9,8 +11,11 @@ const CartItem: React.FC = () => {
           src='https://images-na.ssl-images-amazon.com/images/I/41Leu3gBUFL.jpg'
           alt=''
         />
-        <article>
+        <article className={styles.product_content}>
           <h2>AFROJACK Men's</h2>
+          <IconButton size='small'>
+            <Delete />
+          </IconButton>
         </article>
       </article>
       <article className={styles.cart_amount_price}>

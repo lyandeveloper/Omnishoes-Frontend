@@ -8,6 +8,13 @@ const ShoppingCart: React.FC = () => {
       <article className={styles.cart}>
         <h1>Meu carrinho</h1>
         <CartItem />
+        <section className={styles.zipCode}>
+          <strong>Simule frete e prazo de entrega</strong>
+          <article className={styles.zipCode_box}>
+            <input type='text' placeholder='Digite aqui seu CEP' />
+            <button className='secondary'>Calcular</button>
+          </article>
+        </section>
       </article>
       <article className={styles.shop_resume}>
         <h1>Resumo da compra</h1>

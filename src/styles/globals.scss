@@ -95,3 +95,12 @@ a {
 .swiper-pagination-bullet-active {
   background: var(--secondary-color) !important;
 }
+
+button.primary,
+button.secondary {
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 1rem;
+  outline: 0;
+  border-radius: 4px;
+}
