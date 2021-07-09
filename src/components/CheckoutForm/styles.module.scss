@@ -1,0 +1,19 @@
+.checkout_form {
+  width: 70vw;
+
+  select {
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-right: 10px;
+    background: none;
+    border: 1px solid var(--gray-200);
+    color: var(--gray-800);
+    border-radius: 4px;
+  }
+}
+
+.checkout_form_group {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}

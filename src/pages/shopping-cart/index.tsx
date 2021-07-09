@@ -1,6 +1,7 @@
 import React from 'react';
 import CartItem from '../../components/CartItem';
 import styles from './styles.module.scss';
+import Link from 'next/link';
 
 const ShoppingCart: React.FC = () => {
   return (
@@ -32,7 +33,9 @@ const ShoppingCart: React.FC = () => {
             <strong>R$ 230,00</strong>
           </article>
         </section>
-        <button className='primary'>Continuar</button>
+        <Link href='/checkout'>
+          <button className='primary'>Continuar</button>
+        </Link>
       </article>
     </section>
   );

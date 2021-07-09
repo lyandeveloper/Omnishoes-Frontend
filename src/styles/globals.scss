@@ -104,3 +104,23 @@ button.secondary {
   outline: 0;
   border-radius: 4px;
 }
+
+.MuiInputBase-root {
+  margin-right: 20px !important;
+}
+
+.MuiButton-containedPrimary {
+  background: var(--button) !important;
+}
+
+.MuiStepIcon-active {
+  color: var(--main-color) !important;
+}
+
+.MuiStepIcon-root.MuiStepIcon-completed {
+  color: var(--button) !important;
+}
+
+.MuiRadio-colorSecondary.Mui-checked {
+  color: var(--button) !important;
+}
