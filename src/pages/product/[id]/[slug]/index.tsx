@@ -1,6 +1,7 @@
 import { useRouter } from 'next/dist/client/router';
 import React, { useEffect, useState } from 'react';
 import Zoom from 'react-img-zoom';
+import Header from '../../../../components/Header';
 import api from '../../../../services/api';
 import styles from './styles.module.scss';
 
@@ -43,29 +44,32 @@ const Product: React.FC = () => {
   return loading ? (
     <h1>carregando...</h1>
   ) : (
-    <section className={`container ${styles.product_section}`}>
-      <Zoom
-        img={product.imgUrl}
-        zoomScale={2}
-        width={1280}
-        height={500}
-        className={styles.img}
-      />
-      <aside className={styles.product_info}>
-        <h1>{product.name}</h1>
-        <p>
-          Incididunt veniam do eu irure duis magna. Est Lorem laboris voluptate
-          sint eiusmod proident sit eu ut deserunt dolor dolore consectetur.
-          Commodo sint veniam sunt irure Lorem incididunt commodo consequat ad
-          voluptate nulla excepteur consectetur reprehenderit.
-        </p>
-        <h2>R$ {product.price}</h2>
+    <section>
+      <Header />
+      <section className={`container ${styles.product_section}`}>
+        <Zoom
+          img={product.imgUrl}
+          zoomScale={2}
+          width={1280}
+          height={500}
+          className={styles.img}
+        />
+        <aside className={styles.product_info}>
+          <h1>{product.name}</h1>
+          <p>
+            Incididunt veniam do eu irure duis magna. Est Lorem laboris
+            voluptate sint eiusmod proident sit eu ut deserunt dolor dolore
+            consectetur. Commodo sint veniam sunt irure Lorem incididunt commodo
+            consequat ad voluptate nulla excepteur consectetur reprehenderit.
+          </p>
+          <h2>R$ {product.price}</h2>
 
-        <div className={styles.buttons}>
-          <button className='primary'>Comprar</button>
-          <button className='secondary'>Adicionar ao carrinho</button>
-        </div>
-      </aside>
+          <div className={styles.buttons}>
+            <button className='primary'>Comprar</button>
+            <button className='secondary'>Adicionar ao carrinho</button>
+          </div>
+        </aside>
+      </section>
     </section>
   );
 };

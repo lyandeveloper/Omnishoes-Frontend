@@ -7,10 +7,14 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import CheckoutForm from '../../components/CheckoutForm';
 import styles from './styles.module.scss';
+import HeaderSecondary from '../../components/HeaderSecondary';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
   },
   backButton: {
     marginRight: theme.spacing(1),
@@ -56,39 +60,46 @@ const Checkout: React.FC = () => {
   };
 
   return (
-    <div className={classes.root}>
-      <Stepper activeStep={activeStep} alternativeLabel>
-        {steps.map((label) => (
-          <Step key={label}>
-            <StepLabel>{label}</StepLabel>
-          </Step>
-        ))}
-      </Stepper>
-      <div className={styles.checkout_form}>
-        {activeStep === steps.length ? (
-          <div>
-            <Typography className={classes.instructions}>
-              All steps completed
-            </Typography>
-            <Button onClick={handleReset}>Reset</Button>
-          </div>
-        ) : (
-          <div className={styles.assistent_container}>
-            <Typography className={classes.instructions}>
-              {getStepContent(activeStep)}
-            </Typography>
-            <div className={styles.assistent_buttons}>
-              <Button disabled={activeStep === 0} onClick={handleBack}>
-                Voltar
-              </Button>
-              <Button variant='contained' color='primary' onClick={handleNext}>
-                {activeStep === steps.length - 1 ? 'Finalizar' : 'Continuar'}
-              </Button>
+    <section>
+      <HeaderSecondary />
+      <div className={classes.root}>
+        <Stepper activeStep={activeStep} alternativeLabel>
+          {steps.map((label) => (
+            <Step key={label}>
+              <StepLabel>{label}</StepLabel>
+            </Step>
+          ))}
+        </Stepper>
+        <div className={styles.checkout_form}>
+          {activeStep === steps.length ? (
+            <div>
+              <Typography className={classes.instructions}>
+                All steps completed
+              </Typography>
+              <Button onClick={handleReset}>Reset</Button>
             </div>
-          </div>
-        )}
+          ) : (
+            <div className={styles.assistent_container}>
+              <Typography className={classes.instructions}>
+                {getStepContent(activeStep)}
+              </Typography>
+              <div className={styles.assistent_buttons}>
+                <Button disabled={activeStep === 0} onClick={handleBack}>
+                  Voltar
+                </Button>
+                <Button
+                  variant='contained'
+                  color='primary'
+                  onClick={handleNext}
+                >
+                  {activeStep === steps.length - 1 ? 'Finalizar' : 'Continuar'}
+                </Button>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

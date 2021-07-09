@@ -165,7 +165,7 @@ const CheckoutForm: React.FC = () => {
         />
         <TextField
           id='outlined-basic'
-          label='Bairo'
+          label='Bairro'
           required
           variant='outlined'
         />

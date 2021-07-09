@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Carrousel from '../components/Carrousel';
 import api from '../services/api';
 import axios from 'axios';
+import Header from '../components/Header';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,6 +53,7 @@ const Home: React.FC = () => {
 
   return (
     <main>
+      <Header />
       <Carrousel />
       <div className={`container ${classes.root}`}>
         <GridList
