@@ -186,6 +186,7 @@ const CheckoutForm: React.FC = () => {
           label='Cidade'
           required
           variant='outlined'
+          autoComplete='shipping locality'
         />
         <TextField
           id='outlined-basic'

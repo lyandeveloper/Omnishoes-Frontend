@@ -1,0 +1,122 @@
+.payments {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin-right: 40px;
+}
+
+.title {
+  background: var(--main-color);
+  font-size: 1rem;
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: lighter;
+  padding: 1rem 0.5rem;
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+.delivery {
+  padding: 1rem;
+
+  h3 {
+    font-weight: normal;
+  }
+}
+
+.delivery_options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  margin-top: 20px !important;
+  width: 50%;
+}
+
+.expire_card {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.expire_card_inputs {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+}
+
+.select {
+  padding: 1rem;
+  font-size: 1rem;
+  margin-right: 10px;
+  border-color: #aaa;
+  background: none;
+  margin-top: 10px;
+  outline: 0;
+  color: #888;
+  width: 50%;
+}
+
+.payment_section {
+  display: flex;
+}
+
+.order_section {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  width: 480px;
+}
+
+.order_article {
+  background: var(--gray-100);
+  padding: 1rem;
+  margin-top: 20px;
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+
+  p,
+  h3 {
+    font-size: 0.8rem;
+  }
+
+  table {
+    font-size: 0.8rem;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  td,
+  th {
+    text-align: left;
+  }
+}
+
+.order_title {
+  background: var(--gray-100);
+  padding: 1rem;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  p,
+  h3 {
+    font-size: 0.8rem;
+  }
+}

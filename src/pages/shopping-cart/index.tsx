@@ -15,7 +15,12 @@ const ShoppingCart: React.FC = () => {
           <section className={styles.zipCode}>
             <strong>Simule frete e prazo de entrega</strong>
             <article className={styles.zipCode_box}>
-              <input type='text' placeholder='Digite aqui seu CEP' />
+              <input
+                type='text'
+                name='ship-zip'
+                placeholder='Digite aqui seu CEP'
+                autoComplete='shipping postal-code'
+              />
               <button className='secondary'>Calcular</button>
             </article>
           </section>
