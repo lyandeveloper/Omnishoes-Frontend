@@ -9,6 +9,7 @@ import CheckoutForm from '../../components/CheckoutForm';
 import styles from './styles.module.scss';
 import HeaderSecondary from '../../components/HeaderSecondary';
 import PaymentForm from '../../components/PaymentForm';
+import OrderConfirmation from '../../components/OrderConfirmation';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,7 +38,7 @@ function getStepContent(stepIndex: number) {
     case 1:
       return <PaymentForm />;
     case 2:
-      return 'This is the bit I really care about!';
+      return <OrderConfirmation />;
     default:
       return 'Unknown stepIndex';
   }
